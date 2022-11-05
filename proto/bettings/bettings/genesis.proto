@@ -1,0 +1,14 @@
+syntax = "proto3";
+package dedicateddev.bettings.bettings;
+
+import "gogoproto/gogo.proto";
+import "bettings/bettings/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/DedicatedDev/bettings/x/bettings/types";
+
+// GenesisState defines the bettings module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
